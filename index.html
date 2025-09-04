@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Корисні посилання</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -24,12 +25,14 @@
       margin-bottom: 40px;
     }
     a {
-      display: block;
+      display: flex; /* Використовуємо flexbox для вирівнювання іконки і тексту */
+      align-items: center; /* Вирівнюємо елементи по вертикалі */
+      justify-content: center; /* Центруємо вміст */
       margin: 10px auto;
       padding: 12px 18px;
       width: 90%;
       max-width: 420px;
-      background: #005bbb;
+      background: #005bbb; /* Основний фон посилань */
       color: white;
       text-decoration: none;
       border-radius: 6px;
@@ -39,32 +42,79 @@
     a:hover {
       background: #004099;
     }
+    a i { /* Стилі для іконок */
+        margin-right: 8px; /* Відступ між іконкою та текстом */
+        color: white; /* Базовий колір іконок, якщо не перевизначено */
+    }
+
+    /* Стилі для кольорових іконок */
+    a.facebook i {
+        color: #1877F2; /* Колір Facebook */
+    }
+    a.instagram i {
+        /* Instagram зазвичай має градієнт, але для простоти можна вибрати основний колір */
+        color: #E4405F; /* Або використовувати background-image для градієнта */
+    }
+    a.telegram i {
+        color: #0088CC; /* Колір Telegram */
+    }
+    a.youtube i {
+        color: #FF0000; /* Колір YouTube */
+    }
+    a.globe i { /* Для іконки глобуса можна залишити білий або дати інший колір */
+        color: white; /* Або, наприклад, #00BFFF для блакитного */
+    }
+
+    /* Щоб фон посилань змінився, коли іконка кольорова */
+    a.facebook, a.instagram, a.telegram, a.youtube, a.globe {
+        background: white; /* Білий фон для посилань з кольоровими іконками */
+        color: #333; /* Колір тексту для посилань на білому фоні */
+        border: 1px solid #ddd; /* Можна додати легку рамку */
+    }
+    /* Hover ефект для кольорових посилань */
+    a.facebook:hover {
+        background: #e6f0ff; /* Світліший фон при наведенні */
+    }
+    a.instagram:hover {
+        background: #ffe6eb;
+    }
+    a.telegram:hover {
+        background: #e6f7ff;
+    }
+    a.youtube:hover {
+        background: #ffe6e6;
+    }
+    a.globe:hover {
+        background: #f0f0f0;
+    }
+
   </style>
 </head>
 <body>
 
-  <h1>Освіта м.Кривого Рогу</h1>
+  <h1>Корисні посилання</h1>
 
   <div class="block">
-    <h2>Департамент освіти і науки виконкому<br>Криворізької міської ради</h2>
-    <a href="https://don.kr.ua/" target="_blank">🌐 Сайт</a>
-    <a href="https://www.facebook.com/osvitaKR/" target="_blank">📘 Facebook</a>
-    <a href="https://www.instagram.com/don_vkmr/" target="_blank">📷 Instagram</a>
-    <a href="https://t.me/krosvita" target="_blank">✈️ Telegram</a>
+    <h2>Департамент освіти і науки</h2>
+    <a href="https://don.kr.ua/" target="_blank" class="globe"><i class="fas fa-globe"></i> Офіційний сайт</a>
+    <a href="https://www.facebook.com/osvitaKR/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+    <a href="https://www.instagram.com/don_vkmr/" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://t.me/krosvita" target="_blank" class="telegram"><i class="fab fa-telegram-plane"></i> Telegram</a>
   </div>
 
   <div class="block">
-    <h2>Комунальний заклад<br>«Центр професійного розвитку педагогічних працівників»<br>Криворізької міської ради</h2>
-    <a href="https://cprppkr.education/" target="_blank">🌐 Сайт</a>
-    <a href="https://www.facebook.com/k3cprppkmr/" target="_blank">📘 Facebook</a>
-    <a href="https://www.instagram.com/kz_cprpp_kmr/" target="_blank">📷 Instagram</a>
-    <a href="https://www.youtube.com/@kzcprppkmr" target="_blank">▶️ YouTube</a>
+    <h2>Центр професійного розвитку педагогів</h2>
+    <a href="https://cprppkr.education/" target="_blank" class="globe"><i class="fas fa-globe"></i> Офіційний сайт</a>
+    <a href="https://www.facebook.com/k3cprppkmr/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+    <a href="https://www.instagram.com/kz_cprpp_kmr/" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://www.youtube.com/@kzcprppkmr" target="_blank" class="youtube"><i class="fab fa-youtube"></i> YouTube</a>
   </div>
 
   <div class="block">
     <h2>Освітній портал Кривого Рогу<br>«Розфарбуємо світ разом»</h2>
-    <a href="https://kreducloud.com/" target="_blank">🌐 kreducloud.com</a>
+    <a href="https://kreducloud.com/" target="_blank" class="globe"><i class="fas fa-globe"></i> Офіційний сайт</a>
   </div>
 
 </body>
 </html>
+
